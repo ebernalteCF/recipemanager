@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "be327937-d219-4e2c-b648-54bd8caf8fe0",
+		"name": "RecipeManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recipe",
+			"item": [
+				{
+					"name": "Get Recipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/recipes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Recipes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/recipes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Recipe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Your first recipe\",\n  \"servings\": 3,\n  \"cookingMinutes\": 20,\n  \"vegetarian\": true,\n  \"instructions\" : \"this are the instructions for the first recipe\",\n  \"ingredientSet\": [\n    {\n        \"name\": \"   apple      \",\n        \"amount\": 5,\n        \"measureType\": \"UNIT\"\n    },\n        {\n        \"name\": \"    SUGar     \",\n        \"amount\": 200,\n        \"measureType\": \"GRMS\"\n    }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/recipes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Recipe",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Your first recipe but updated\",\n  \"servings\": 4,\n  \"cookingMinutes\": 15,\n  \"vegetarian\": true,\n  \"instructions\" : \"this are the instructions for the first recipe updated\",\n  \"ingredientSet\": [\n    {\n        \"name\": \"   banana      \",\n        \"amount\": 5,\n        \"measureType\": \"UNIT\"\n    },\n        {\n        \"name\": \"    SUGar     \",\n        \"amount\": 200,\n        \"measureType\": \"GRMS\"\n    }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/recipes/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recipe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/recipes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Recipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/recipes/search",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipes",
+								"search"
+							],
+							"query": [
+								{
+									"key": "servings",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "instructionMatch",
+									"value": "first",
+									"disabled": true
+								},
+								{
+									"key": "isVegetarian",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "withoutIngredients",
+									"value": "apple",
+									"disabled": true
+								},
+								{
+									"key": "withIngredients",
+									"value": "sugar",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

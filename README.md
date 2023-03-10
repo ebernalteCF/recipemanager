@@ -10,7 +10,8 @@ In addition a user can also filter the recipes by:
 * with certain ingredient
 
 ### Running the app
-You can run the application by running the file `RecipemanagerApplication.java`. the service will be run at the url **http://localhost:8080/recipes**. For more documentation about the endpoint you can access the [localhost swagger page](http://localhost:8080/swagger-ui/index.html). You can also use the imported collection from Postman in the root folder with the endpoints ready to be used. 
+* First use the command `mvn clean install` so that the application can be run.
+* You can run the application by running the file `RecipemanagerApplication.java`. the service will be run at the url **http://localhost:8080/recipes**. For more documentation about the endpoint you can access the [localhost swagger page](http://localhost:8080/swagger-ui/index.html). You can also use the imported collection from Postman in the root folder with the endpoints ready to be used. 
 
 ### Architectural Decisions
 
